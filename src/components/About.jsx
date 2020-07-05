@@ -16,7 +16,7 @@ class About extends Component {
           <a
             href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
           >
             <img
               className="cv-icon"
@@ -127,7 +127,7 @@ class About extends Component {
             <a
               href="https://github.com/Flaviusmadarassi/Proiect-IMDb-Grupa-Mercur"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
             >
               <img
                 className="gh-icon"
