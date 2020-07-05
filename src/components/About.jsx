@@ -13,7 +13,11 @@ class About extends Component {
             sharpen my skills and after that maybe I could earn a job offer.
           </p>
           <p>Feel free to check out my CV.</p>
-          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+          <a
+            href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+            target="_blank"
+            rel="noopener"
+          >
             <img
               className="cv-icon"
               src={require("./img/cv-img.jpg")}
@@ -120,7 +124,11 @@ class About extends Component {
                 <img src={require("./img/myIMDb5.png")} alt="" />
               </div>
             </div>
-            <a href="https://github.com/Flaviusmadarassi/Proiect-IMDb-Grupa-Mercur">
+            <a
+              href="https://github.com/Flaviusmadarassi/Proiect-IMDb-Grupa-Mercur"
+              target="_blank"
+              rel="noopener"
+            >
               <img
                 className="gh-icon"
                 src={require("./img/github.svg")}

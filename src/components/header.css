@@ -43,4 +43,8 @@
   .navBar {
     justify-content: center;
   }
+
+  .navBar a:hover::after {
+    width: 110%;
+  }
 }
