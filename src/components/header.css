@@ -1,0 +1,46 @@
+.navBar {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  height: 18vh;
+  width: 100%;
+  border-bottom: 1px solid black;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
+  font-size: 28px;
+  transition: all 400ms ease-in-out;
+}
+
+.nav-scrolled {
+  height: 12vh;
+  font-size: 20px;
+  background-color: rgba(117, 158, 173, 0.95);
+}
+
+.navBar span {
+  padding: 0 3vw;
+}
+
+.navBar a {
+  text-decoration: none;
+  color: black;
+}
+
+.navBar a::after {
+  content: "";
+  display: block;
+  width: 0px;
+  margin-top: 4px;
+  height: 1px;
+  background: pink;
+  transition: width 0.3s ease 0s;
+}
+
+.navBar a:hover::after {
+  width: 150%;
+}
+
+@media (max-width: 700px) {
+  .navBar {
+    justify-content: center;
+  }
+}

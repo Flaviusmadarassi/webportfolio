@@ -1,0 +1,43 @@
+.ContactContainer {
+  text-align: center;
+  padding-top: 50px;
+}
+
+.ContactContainer h1 {
+  font-size: 45px;
+  font-weight: 700;
+}
+
+.ContactContainer p {
+  font-size: 25px;
+  font-weight: 300;
+}
+
+.map-container {
+  position: relative;
+  height: 400px;
+  width: 100%;
+  box-shadow: 0 0 30px black;
+}
+
+.mailIcon {
+  cursor: pointer;
+  width: 10vw;
+  transition: 300ms;
+}
+
+.mailIcon:active {
+  transform: scale(0.85);
+}
+
+@media (max-width: 380px) {
+  .ContactContainer h1 {
+    font-size: 40px;
+    font-weight: 500;
+  }
+
+  .ContactContainer p {
+    font-size: 20px;
+    font-weight: 100;
+  }
+}
