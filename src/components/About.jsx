@@ -2,17 +2,42 @@ import React, { Component } from "react";
 import "./about.css";
 
 class About extends Component {
+  componentDidMount = () => {
+    const titleOptions = {
+      rootMargin: "0px 0px -200px 0px",
+    };
+    const faders = document.querySelectorAll(".fade-in");
+    const titleObserver = new IntersectionObserver(function (
+      entries,
+      titleObserver
+    ) {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+          return;
+        } else {
+          entry.target.classList.add("appear");
+          titleObserver.unobserve(entry.target);
+        }
+      });
+    },
+    titleOptions);
+
+    faders.forEach((fader) => {
+      titleObserver.observe(fader);
+    });
+  };
+
   render() {
     return (
       <div className="AboutContainer" id="about">
         <section className="about">
-          <h1>Let's get started</h1>
+          <h1 className="fade-in">Let's get started</h1>
           <p>
             If there is anything that I want right now, it's to learn more about
             web developing. I would happily take part in an internship to
             sharpen my skills and after that maybe I could earn a job offer.
           </p>
-          <p>Feel free to check out my CV.</p>
+          <p className="fade-in">Feel free to check out my CV.</p>
           <a
             href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
             target="_blank"
@@ -25,7 +50,7 @@ class About extends Component {
             />
           </a>
 
-          <h1>Training at Informal School of IT</h1>
+          <h1 className="fade-in">Training at Informal School of IT</h1>
           <img
             className="scoalaIT"
             src={require("./img/scoalaIT.jpg")}
@@ -34,11 +59,11 @@ class About extends Component {
           <p>
             Started the course in November 2019, hoping that I will become a
             junior-level front-end web dev. Learning sessions were concise and
-            every week we had homeworks suited for beginners. While working by
+            every week we had homework suited for beginners. While working by
             myself on small exercises I managed to accumulate more information
             in a short period of time.
           </p>
-          <h1>Studied technologies:</h1>
+          <h1 className="fade-in">Studied technologies:</h1>
           <ul className="techList">
             <li>
               HTML5 and CSS3: how to build a User Interface, proper responsive
@@ -68,7 +93,7 @@ class About extends Component {
         </section>
         <section className="about" id="about-work">
           <div className="project">
-            <h1>Group project</h1>
+            <h1 className="fade-in">Group project</h1>
             <p>
               This app was developed as our final project, a IMDb clone website.
             </p>
@@ -81,11 +106,11 @@ class About extends Component {
               interface.
             </p>
             <div className="aboutProject">
-              <h1>Short description of our project</h1>
+              <h1 className="fade-in">Short description of our project</h1>
               <div className="aboutProject-card" id="1">
                 <p>
                   This is the homepage of the web-site, it has a carousel made
-                  with bootstrap, the header initially consists 3 buttons to
+                  with bootstrap, the header initially consists of 3 buttons to
                   navigate between pages, the navigation was made possible with
                   react router.
                 </p>
@@ -104,7 +129,7 @@ class About extends Component {
                   This is the register page, it allows you to sign in with an
                   existing user or sign up with new credentials. After signing
                   in the user will be able to add movies or make changes to the
-                  already existing movies as well delete them.
+                  already existing movies as well as delete them.
                 </p>
                 <img src={require("./img/myIMDb3.png")} alt="" />
               </div>
@@ -119,11 +144,12 @@ class About extends Component {
               <div className="aboutProject-card" id="5">
                 <p>
                   Beacause we were a team of 4, we needed to divide our work, so
-                  using Trello to manage our tasks was more easily.
+                  using Trello to manage our tasks was easier.
                 </p>
                 <img src={require("./img/myIMDb5.png")} alt="" />
               </div>
             </div>
+            <p>Click here to accces the project repository.</p>
             <a
               href="https://github.com/Flaviusmadarassi/Proiect-IMDb-Grupa-Mercur"
               target="_blank"
@@ -135,7 +161,6 @@ class About extends Component {
                 alt="github"
               ></img>
             </a>
-            <p>Click here to accces the project repository.</p>
           </div>
         </section>
         <section></section>

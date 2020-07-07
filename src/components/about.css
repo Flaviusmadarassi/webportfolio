@@ -4,6 +4,17 @@
   font-weight: 400;
 }
 
+.fade-in {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 800ms ease-in;
+}
+
+.fade-in.appear {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
 .AboutContainer p {
   font-size: 25px;
   font-weight: 300;

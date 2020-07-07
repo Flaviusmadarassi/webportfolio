@@ -21,6 +21,7 @@
 }
 
 .mailIcon {
+  padding-bottom: 30px;
   cursor: pointer;
   width: 10vw;
   transition: 300ms;

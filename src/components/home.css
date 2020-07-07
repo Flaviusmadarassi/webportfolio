@@ -1,6 +1,7 @@
 .HomeContainer {
   height: 80vh;
   padding-top: 25vh;
+  text-align: center;
 }
 
 .HomeContainer h1 {
@@ -26,6 +27,13 @@
 
 .arrowToHome:hover {
   transform: scale(1.2);
+}
+
+.personalPic {
+  margin-top: 30px;
+  width: 250px;
+  border-radius: 50%;
+  box-shadow: 0 10px 20px black;
 }
 
 @media screen and (max-width: 960px) {
@@ -76,5 +84,9 @@
   .arrowToHome {
     left: 75%;
     width: 50px;
+  }
+
+  .personalPic {
+    width: 180px;
   }
 }

@@ -6,6 +6,11 @@ class Home extends Component {
     return (
       <div className="HomeContainer" id="homepage">
         <h1>Hello! My name is Flavius and I'm a Front-End Web Developer.</h1>
+        <img
+          className="personalPic"
+          src={require("./img/CV-photo.jpg")}
+          alt="myCV"
+        />
         <a href="#homepage">
           <img
             className="arrowToHome"

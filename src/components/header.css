@@ -4,6 +4,7 @@
   align-items: center;
   height: 18vh;
   width: 100%;
+  z-index: 500;
   border-bottom: 1px solid black;
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
   font-size: 28px;
@@ -41,7 +42,7 @@
 
 @media (max-width: 700px) {
   .navBar {
-    justify-content: center;
+    justify-content: space-evenly;
   }
 
   .navBar a:hover::after {
