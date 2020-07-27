@@ -1,18 +1,18 @@
-.AboutContainer h1 {
-  font-size: 50px;
-  text-align: center;
-  font-weight: 400;
-}
-
 .fade-in {
   opacity: 0;
   transform: translateY(50px);
-  transition: 800ms ease-in;
+  transition: 500ms ease-in;
 }
 
 .fade-in.appear {
   opacity: 1;
   transform: translateY(0px);
+}
+
+.AboutContainer h1 {
+  font-size: 50px;
+  text-align: center;
+  font-weight: 400;
 }
 
 .AboutContainer p {
@@ -44,34 +44,224 @@
   box-shadow: 0px 10px 20px black;
 }
 
-.techList {
-  list-style: none;
-  padding: 0;
-  font-size: 20px;
-  font-weight: 300;
-  line-height: 2.5rem;
+.techIcons {
+  position: relative;
+  height: 60vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
 }
 
 .techIcons img {
   width: 100px;
-  padding: 0 2vw;
+  padding: 1.5vw;
+  cursor: pointer;
+  filter: drop-shadow(5px 7px 3px black);
+  transition: transform 800ms ease-in-out;
+}
+
+.open-techIcons {
+  transform: translateY(30vh);
+}
+
+.techIcons-text {
+  position: absolute;
+  top: 50%;
+  max-width: 500px;
+}
+
+.scoalaIT {
+  transition: 200ms ease-in;
+}
+
+.scoalaIT:hover {
+  transform: scale(0.9);
+}
+
+.cv-icon {
+  width: 80px;
+  transition: 200ms ease-in;
+}
+
+.cv-icon:hover {
+  transform: scale(0.9);
 }
 
 .gh-icon {
   width: 8vw;
-  transition: 500ms;
+  transition: 300ms;
 }
 
 .gh-icon:hover {
   transform: scale(1.2);
 }
 
-.cv-icon {
-  width: 80px;
+/*  CUSTOM PROPERTIES FOR ICONS TEXT */
+
+@media (min-width: 701px) {
+  .first {
+    left: 12vw;
+    animation: techIcons-text-fadeL 1s ease-in-out;
+  }
+
+  .second {
+    left: 30vw;
+    animation: techIcons-text-fadeL 1s ease-in-out;
+  }
+
+  .third {
+    left: 4vw;
+    animation: techIcons-text-fadeR 1s ease-in-out;
+  }
+
+  .fourth {
+    right: 30vw;
+    animation: techIcons-text-fadeR 1s ease-in-out;
+  }
+
+  .fifth {
+    right: 12vw;
+    animation: techIcons-text-fadeR 1s ease-in-out;
+  }
+}
+
+/* =============================================== */
+
+@media (max-width: 1300px) {
+  .third {
+    left: 0;
+    width: 400px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .third {
+    left: 0;
+    width: 300px;
+  }
+}
+
+@media (max-width: 920px) {
+  .second {
+    width: 350px;
+  }
+
+  .third {
+    left: 0;
+    width: 350px;
+  }
+}
+
+@media (max-width: 820px) {
+  .second {
+    width: 350px;
+  }
+
+  .third {
+    left: 0;
+    width: 280px;
+  }
+}
+
+@media (max-width: 700px) {
+  .techIcons {
+    flex-direction: column;
+    align-items: center;
+    height: 150vh;
+  }
+
+  .techIcons-text {
+    top: 0;
+    width: 250px;
+    animation: none;
+  }
+
+  .open-techIcons {
+    transform: translateY(0);
+  }
+
+  .first {
+    animation: techIcons-text-fadeD 1s ease-in-out;
+    /* top: 0;
+    right: 0; */
+  }
+
+  .second {
+    animation: techIcons-text-fadeD 1s ease-in-out;
+    /* top: 0;
+    right: 0; */
+  }
+
+  .third {
+    animation: techIcons-text-fadeD 1s ease-in-out;
+    /* top: 0;
+    right: 0; */
+  }
+
+  .fourth {
+    animation: techIcons-text-fadeD 1s ease-in-out;
+    /* top: 0;
+    right: 0; */
+  }
+
+  .fifth {
+    animation: techIcons-text-fadeD 1s ease-in-out;
+    /* top: 0;
+    right: 0; */
+  }
 }
 
 @media (max-width: 380px) {
-  .aboutProject-card img {
-    width: 300px;
+  .AboutContainer h1 {
+    font-size: 30px;
+  }
+
+  .AboutContainer p {
+    font-size: 18px;
+  }
+
+  .scoalaIT {
+    width: 200px;
+  }
+
+  .techIcons {
+    height: 110vh;
+  }
+
+  .techIcons img {
+    width: 80px;
+  }
+}
+
+@keyframes techIcons-text-fadeL {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes techIcons-text-fadeR {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes techIcons-text-fadeD {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
   }
 }

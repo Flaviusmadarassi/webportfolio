@@ -2,9 +2,18 @@ import React, { Component } from "react";
 import "./about.css";
 
 class About extends Component {
+  state = {
+    icon1: false,
+    icon2: false,
+    icon3: false,
+    icon4: false,
+    icon5: false,
+    openIcons: false,
+  };
+
   componentDidMount = () => {
     const titleOptions = {
-      rootMargin: "0px 0px -200px 0px",
+      rootMargin: "0px 0px -150px 0px",
     };
     const faders = document.querySelectorAll(".fade-in");
     const titleObserver = new IntersectionObserver(function (
@@ -27,6 +36,56 @@ class About extends Component {
     });
   };
 
+  icon1change = () => {
+    this.setState({
+      icon1: true,
+      icon2: false,
+      icon3: false,
+      icon4: false,
+      icon5: false,
+    });
+  };
+
+  icon2change = () => {
+    this.setState({
+      icon1: false,
+      icon2: true,
+      icon3: false,
+      icon4: false,
+      icon5: false,
+    });
+  };
+
+  icon3change = () => {
+    this.setState({
+      icon1: false,
+      icon2: false,
+      icon3: true,
+      icon4: false,
+      icon5: false,
+    });
+  };
+
+  icon4change = () => {
+    this.setState({
+      icon1: false,
+      icon2: false,
+      icon3: false,
+      icon4: true,
+      icon5: false,
+    });
+  };
+
+  icon5change = () => {
+    this.setState({
+      icon1: false,
+      icon2: false,
+      icon3: false,
+      icon4: false,
+      icon5: true,
+    });
+  };
+
   render() {
     return (
       <div className="AboutContainer" id="about">
@@ -37,7 +96,7 @@ class About extends Component {
             web developing. I would happily take part in an internship to
             sharpen my skills and after that maybe I could earn a job offer.
           </p>
-          <p className="fade-in">Feel free to check out my CV.</p>
+          <p>Feel free to check out my CV.</p>
           <a
             href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
             target="_blank"
@@ -51,11 +110,17 @@ class About extends Component {
           </a>
 
           <h1 className="fade-in">Training at Informal School of IT</h1>
-          <img
-            className="scoalaIT"
-            src={require("./img/scoalaIT.jpg")}
-            alt="scoalaIT"
-          />
+          <a
+            href="https://scoalainformala.ro/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              className="scoalaIT"
+              src={require("./img/scoalaIT.jpg")}
+              alt="scoalaIT"
+            />
+          </a>
           <p>
             Started the course in November 2019, hoping that I will become a
             junior-level front-end web dev. Learning sessions were concise and
@@ -64,31 +129,83 @@ class About extends Component {
             in a short period of time.
           </p>
           <h1 className="fade-in">Studied technologies:</h1>
-          <ul className="techList">
-            <li>
-              HTML5 and CSS3: how to build a User Interface, proper responsive
-              web-pages, animations, flex-box, grid layout.
-            </li>
-            <li>
-              JavaScript: use of variables, functions, objects, scoping,
-              hoisting, AJAX, DOM manipulation.
-            </li>
-            <li>
-              HTTP: fundamentals about the protocol: methods, headers, error
-              codes.
-            </li>
-            <li>GIT: learned the principles and basic commands.</li>
-            <li>
-              React JS: fundamentals: JSX, rendering elements, components and
-              props, state and lifecycle.
-            </li>
-          </ul>
+
           <div className="techIcons">
-            <img src={require("./img/html5.png")} alt="html" />
-            <img src={require("./img/css3.png")} alt="css" />
-            <img src={require("./img/react.png")} alt="react" />
-            <img src={require("./img/javascript.png")} alt="javaScript" />
-            <img src={require("./img/nodejs.png")} alt="node" />
+            <img
+              onClick={this.icon1change}
+              className={
+                " " + (this.state.icon1 === true ? "open-techIcons" : "")
+              }
+              src={require("./img/html5.png")}
+              alt="html"
+            />
+            {this.state.icon1 ? (
+              <p className="techIcons-text first">
+                HTML5: how to build a User Interface, also how to build a simple
+                structure for components in React.js, using JSX, a syntax
+                extension to JavaScript.
+              </p>
+            ) : null}
+            <img
+              onClick={this.icon2change}
+              className={
+                " " + (this.state.icon2 === true ? "open-techIcons" : "")
+              }
+              src={require("./img/css3.png")}
+              alt="css"
+            />
+            {this.state.icon2 ? (
+              <p className="techIcons-text second">
+                HTML5: how to build a User Interface, also how to build a simple
+                structure for components in React.js, using JSX, a syntax
+                extension to JavaScript.
+              </p>
+            ) : null}
+            <img
+              onClick={this.icon3change}
+              className={
+                " " + (this.state.icon3 === true ? "open-techIcons" : "")
+              }
+              src={require("./img/react.png")}
+              alt="react"
+            />
+            {this.state.icon3 ? (
+              <p className="techIcons-text third">
+                HTML5: how to build a User Interface, also how to build a simple
+                structure for components in React.js, using JSX, a syntax
+                extension to JavaScript.
+              </p>
+            ) : null}
+            <img
+              onClick={this.icon4change}
+              className={
+                " " + (this.state.icon4 === true ? "open-techIcons" : "")
+              }
+              src={require("./img/javascript.png")}
+              alt="javaScript"
+            />
+            {this.state.icon4 ? (
+              <p className="techIcons-text fourth">
+                HTML5: how to build a User Interface, also how to build a simple
+                structure for components in React.js, using JSX, a syntax
+                extension to JavaScript.
+              </p>
+            ) : null}
+            <img
+              onClick={this.icon5change}
+              className={
+                " " + (this.state.icon5 === true ? "open-techIcons" : "")
+              }
+              src={require("./img/nodejs.png")}
+              alt="node"
+            />
+            {this.state.icon5 ? (
+              <p className="techIcons-text fifth">
+                HTML5: how to build a User Interface, also how to build a simple
+                structure for components in React.js, using JSX, a syntax
+                extension to JavaScript.
+              </p>
+            ) : null}
           </div>
         </section>
         <section className="about" id="about-work">
@@ -159,11 +276,11 @@ class About extends Component {
                 className="gh-icon"
                 src={require("./img/github.svg")}
                 alt="github"
-              ></img>
+              />
             </a>
           </div>
         </section>
-        <section></section>
+        <section>Useful Youtube Channels</section>
       </div>
     );
   }
