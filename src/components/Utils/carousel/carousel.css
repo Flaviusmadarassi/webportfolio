@@ -1,6 +1,7 @@
 .carousel-container {
   width: 80%;
   margin: auto;
+  padding-bottom: 20px;
 }
 
 .carousel-container img {

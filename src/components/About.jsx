@@ -157,9 +157,8 @@ class About extends Component {
             />
             {this.state.icon2 ? (
               <p className="techIcons-text second">
-                HTML5: how to build a User Interface, also how to build a simple
-                structure for components in React.js, using JSX, a syntax
-                extension to JavaScript.
+                CSS3: Describes the style of an HTML document. CSS describes how
+                HTML elements should be displayed.
               </p>
             ) : null}
             <img
@@ -172,9 +171,10 @@ class About extends Component {
             />
             {this.state.icon3 ? (
               <p className="techIcons-text third">
-                HTML5: how to build a User Interface, also how to build a simple
-                structure for components in React.js, using JSX, a syntax
-                extension to JavaScript.
+                React makes it painless to create interactive UIs. Design simple
+                views for each state in your application, and React will
+                efficiently update and render just the right components when
+                your data changes.
               </p>
             ) : null}
             <img
@@ -187,9 +187,9 @@ class About extends Component {
             />
             {this.state.icon4 ? (
               <p className="techIcons-text fourth">
-                HTML5: how to build a User Interface, also how to build a simple
-                structure for components in React.js, using JSX, a syntax
-                extension to JavaScript.
+                How to use variables, functions, objects, scope, AJAX, jQuery,
+                DOM. Alongside HTML and CSS, JavaScript is one of the core
+                technologies of the World Wide Web.
               </p>
             ) : null}
             <img
@@ -202,9 +202,9 @@ class About extends Component {
             />
             {this.state.icon5 ? (
               <p className="techIcons-text fifth">
-                HTML5: how to build a User Interface, also how to build a simple
-                structure for components in React.js, using JSX, a syntax
-                extension to JavaScript.
+                Node.js is a JavaScript runtime built on Chrome's V8 JavaScript
+                engine. Node.js runs single-threaded, non-blocking,
+                asynchronously programming, which is very memory efficient.
               </p>
             ) : null}
           </div>
