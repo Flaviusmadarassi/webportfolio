@@ -1,17 +1,21 @@
 {
   "files": {
-    "main.css": "/webportfolio/static/css/main.8ef51558.chunk.css",
-    "main.js": "/webportfolio/static/js/main.edef5d3a.chunk.js",
-    "main.js.map": "/webportfolio/static/js/main.edef5d3a.chunk.js.map",
+    "main.css": "/webportfolio/static/css/main.776ab374.chunk.css",
+    "main.js": "/webportfolio/static/js/main.32370a9f.chunk.js",
+    "main.js.map": "/webportfolio/static/js/main.32370a9f.chunk.js.map",
     "runtime-main.js": "/webportfolio/static/js/runtime-main.da1a3077.js",
     "runtime-main.js.map": "/webportfolio/static/js/runtime-main.da1a3077.js.map",
-    "static/js/2.ee30a7e1.chunk.js": "/webportfolio/static/js/2.ee30a7e1.chunk.js",
-    "static/js/2.ee30a7e1.chunk.js.map": "/webportfolio/static/js/2.ee30a7e1.chunk.js.map",
+    "static/css/2.11829350.chunk.css": "/webportfolio/static/css/2.11829350.chunk.css",
+    "static/js/2.3a3cf007.chunk.js": "/webportfolio/static/js/2.3a3cf007.chunk.js",
+    "static/js/2.3a3cf007.chunk.js.map": "/webportfolio/static/js/2.3a3cf007.chunk.js.map",
     "index.html": "/webportfolio/index.html",
-    "precache-manifest.4cde957ea269922d73cb9f26e63b2fee.js": "/webportfolio/precache-manifest.4cde957ea269922d73cb9f26e63b2fee.js",
+    "precache-manifest.1386c03d1c5e0836fb154f90a43d8600.js": "/webportfolio/precache-manifest.1386c03d1c5e0836fb154f90a43d8600.js",
     "service-worker.js": "/webportfolio/service-worker.js",
-    "static/css/main.8ef51558.chunk.css.map": "/webportfolio/static/css/main.8ef51558.chunk.css.map",
-    "static/js/2.ee30a7e1.chunk.js.LICENSE.txt": "/webportfolio/static/js/2.ee30a7e1.chunk.js.LICENSE.txt",
+    "static/css/2.11829350.chunk.css.map": "/webportfolio/static/css/2.11829350.chunk.css.map",
+    "static/css/main.776ab374.chunk.css.map": "/webportfolio/static/css/main.776ab374.chunk.css.map",
+    "static/js/2.3a3cf007.chunk.js.LICENSE.txt": "/webportfolio/static/js/2.3a3cf007.chunk.js.LICENSE.txt",
+    "static/media/CV-photo.jpg": "/webportfolio/static/media/CV-photo.fe05febb.jpg",
+    "static/media/CV.pdf": "/webportfolio/static/media/CV.a369bb7a.pdf",
     "static/media/App.css": "/webportfolio/static/media/clouds2.d504b71f.jpg",
     "static/media/email.svg": "/webportfolio/static/media/email.9a359a75.svg",
     "static/media/github.svg": "/webportfolio/static/media/github.76d344f0.svg",
@@ -25,8 +29,9 @@
   },
   "entrypoints": [
     "static/js/runtime-main.da1a3077.js",
-    "static/js/2.ee30a7e1.chunk.js",
-    "static/css/main.8ef51558.chunk.css",
-    "static/js/main.edef5d3a.chunk.js"
+    "static/css/2.11829350.chunk.css",
+    "static/js/2.3a3cf007.chunk.js",
+    "static/css/main.776ab374.chunk.css",
+    "static/js/main.32370a9f.chunk.js"
   ]
 }
