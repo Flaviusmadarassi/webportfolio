@@ -12,7 +12,7 @@ class Contact extends Component {
       <div className="ContactContainer" id="contact">
         <section>
           <h1>Contact me here!</h1>
-          <p>I am located in Romania, Cluj-Napoca.</p>
+          <p>I am located in Cluj-Napoca, Romania.</p>
           <p>
             Feel free to contact me via e-mail or call me:
             <strong> +40744882797</strong>

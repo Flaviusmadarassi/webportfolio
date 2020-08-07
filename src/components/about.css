@@ -13,6 +13,7 @@
   font-size: 50px;
   text-align: center;
   font-weight: 400;
+  margin: 50px 0;
 }
 
 .AboutContainer p {
@@ -24,24 +25,7 @@
 
 .about {
   text-align: center;
-  padding-top: 12vh;
-}
-
-.aboutProject-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0;
-  padding: 30px 0;
-}
-
-.aboutProject-card p {
-  max-width: 800px;
-}
-
-.aboutProject-card img {
-  width: 80vw;
-  box-shadow: 0px 10px 20px black;
+  padding-top: 15vh;
 }
 
 .techIcons {
@@ -137,7 +121,7 @@
 @media (max-width: 1000px) {
   .third {
     left: 0;
-    width: 300px;
+    width: 350px;
   }
 }
 
@@ -148,7 +132,7 @@
 
   .third {
     left: 0;
-    width: 350px;
+    width: 300px;
   }
 }
 
@@ -170,10 +154,14 @@
     height: 150vh;
   }
 
+  .techIcons img {
+    width: 80px;
+  }
+
   .techIcons-text {
-    top: 0;
     width: 250px;
-    animation: none;
+    position: relative;
+    top: 0;
   }
 
   .open-techIcons {
@@ -181,33 +169,23 @@
   }
 
   .first {
-    animation: techIcons-text-fadeD 1s ease-in-out;
-    /* top: 0;
-    right: 0; */
+    animation: techIcons-text-fadeR 800ms ease-in-out;
   }
 
   .second {
-    animation: techIcons-text-fadeD 1s ease-in-out;
-    /* top: 0;
-    right: 0; */
+    animation: techIcons-text-fadeR 800ms ease-in-out;
   }
 
   .third {
-    animation: techIcons-text-fadeD 1s ease-in-out;
-    /* top: 0;
-    right: 0; */
+    animation: techIcons-text-fadeR 800ms ease-in-out;
   }
 
   .fourth {
-    animation: techIcons-text-fadeD 1s ease-in-out;
-    /* top: 0;
-    right: 0; */
+    animation: techIcons-text-fadeR 800ms ease-in-out;
   }
 
   .fifth {
-    animation: techIcons-text-fadeD 1s ease-in-out;
-    /* top: 0;
-    right: 0; */
+    animation: techIcons-text-fadeR 800ms ease-in-out;
   }
 }
 
@@ -218,6 +196,7 @@
 
   .AboutContainer p {
     font-size: 18px;
+    padding: 0;
   }
 
   .scoalaIT {
@@ -229,7 +208,11 @@
   }
 
   .techIcons img {
-    width: 80px;
+    width: 60px;
+  }
+
+  .techIcons-text {
+    width: 250px;
   }
 }
 
@@ -247,17 +230,6 @@
 @keyframes techIcons-text-fadeR {
   from {
     transform: translateX(-50px);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes techIcons-text-fadeD {
-  from {
-    transform: translateY(-30px);
     opacity: 0;
   }
   to {

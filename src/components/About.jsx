@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./about.css";
+import Slider from "./Utils/carousel/carousel.jsx";
 
 class About extends Component {
   state = {
@@ -98,7 +99,7 @@ class About extends Component {
           </p>
           <p>Feel free to check out my CV.</p>
           <a
-            href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+            href={require("./Utils/CV.pdf")}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -222,50 +223,8 @@ class About extends Component {
               function. This makes it more easy and convenient to build a user
               interface.
             </p>
-            <div className="aboutProject">
-              <h1 className="fade-in">Short description of our project</h1>
-              <div className="aboutProject-card" id="1">
-                <p>
-                  This is the homepage of the web-site, it has a carousel made
-                  with bootstrap, the header initially consists of 3 buttons to
-                  navigate between pages, the navigation was made possible with
-                  react router.
-                </p>
-                <img src={require("./img/myIMDb1.png")} alt="" />
-              </div>
-              <div className="aboutProject-card" id="2">
-                <p>
-                  This is the search page, it allows the user to search for
-                  movies by name or use the implemented filters that are
-                  positioned in the left side of the page.
-                </p>
-                <img src={require("./img/myIMDb2.png")} alt="" />
-              </div>
-              <div className="aboutProject-card" id="3">
-                <p>
-                  This is the register page, it allows you to sign in with an
-                  existing user or sign up with new credentials. After signing
-                  in the user will be able to add movies or make changes to the
-                  already existing movies as well as delete them.
-                </p>
-                <img src={require("./img/myIMDb3.png")} alt="" />
-              </div>
-              <div className="aboutProject-card" id="4">
-                <p>
-                  This is the add movie page, it enables the user to add movies.
-                  As it can be seen in the header the buttons for editing movies
-                  and loging out has appeared after the user signed in.
-                </p>
-                <img src={require("./img/myIMDb4.png")} alt="" />
-              </div>
-              <div className="aboutProject-card" id="5">
-                <p>
-                  Beacause we were a team of 4, we needed to divide our work, so
-                  using Trello to manage our tasks was easier.
-                </p>
-                <img src={require("./img/myIMDb5.png")} alt="" />
-              </div>
-            </div>
+            <h1 className="fade-in">Short description of our project</h1>
+            <Slider />
             <p>Click here to accces the project repository.</p>
             <a
               href="https://github.com/Flaviusmadarassi/Proiect-IMDb-Grupa-Mercur"
@@ -280,7 +239,6 @@ class About extends Component {
             </a>
           </div>
         </section>
-        <section>Useful Youtube Channels</section>
       </div>
     );
   }
