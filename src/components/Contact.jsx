@@ -15,7 +15,7 @@ class Contact extends Component {
           <p>I am located in Cluj-Napoca, Romania.</p>
           <p>
             Feel free to contact me via e-mail or call me:
-            <strong> +40744882797</strong>
+            <strong> +40756558013</strong>
           </p>
           <img
             className="mailIcon"
